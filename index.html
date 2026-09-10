@@ -223,13 +223,13 @@ const COMPILED = "September 10, 2026";
   });
 
   // ---------- legend (size) ----------
-  const lg = svg.append('g').attr('class','maplegend').attr('transform', `translate(${W-215},${H-118})`);
+  const lg = svg.append('g').attr('class','maplegend').attr('transform', `translate(${W-149},${H-132})`);   // open water right of Florida
   lg.append('text').attr('class','t').attr('x',0).attr('y',0).text('Named plaintiffs');
   [1, 10, 40].forEach((v,i) => {
     const r = rGlow(v), cy = 96 - r;
-    lg.append('circle').attr('cx', 44).attr('cy', cy).attr('r', r);
-    lg.append('line').attr('x1', 44).attr('x2', 104).attr('y1', cy - r).attr('y2', cy - r);
-    lg.append('text').attr('x', 108).attr('y', cy - r + 4).text(v === 1 ? '1 athlete' : v + ' athletes');
+    lg.append('circle').attr('cx', 40).attr('cy', cy).attr('r', r);
+    lg.append('line').attr('x1', 40).attr('x2', 84).attr('y1', cy - r).attr('y2', cy - r);
+    lg.append('text').attr('x', 88).attr('y', cy - r + 4).text(v === 1 ? '1 athlete' : v + ' athletes');
   });
 
   // ---------- controls state ----------
